@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LOGIN</title>
+</head>
+<body>
+	<h3><u>LOGIN PAGE</u></h3>
+	Username:<input type="text" id="username" placeholder="name"><br><br>
+	Password:<input type="text" id="pass" placeholder="Enter password"><br><br>
+	<input type="submit" value="Submit" id="btn" onclick="checkvalue()">
+	<script>
+	
+		function checkvalue()
+		{
+			let username=document.getElementById("username").value;
+			if(username.trim() ==="")
+			{
+				alert("username is required!");
+			}
+		}
+		let password=document.getElementById("pass").value;
+		if(password.length<6 || password.length>12)
+		{
+				alert("password is incorrect!");
+		}
+	</script>
+</body>
+</html>
+
