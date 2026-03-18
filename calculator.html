@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<input type="number" id="a">
+	<input type="number" id="b">
+	<input type="text" maxlength=1 id="op">
+	<input type="button" value="submit" id="btn">
+	<p id="output"></p>
+<script>
+	document.getElementById("btn").addEventListener("click",function(){
+		let x=Number(document.getElementById("a").value);
+		let y=Number(document.getElementById("b").value);
+		let z=document.getElementById("op").value;
+		let otp;
+		switch(z)
+		{
+			case "+":
+				otp=x+y;
+				break;
+			case "-":
+				otp=x-y;
+				break;
+			case "*":
+				otp=x*y;
+				break;
+			case "/":
+				otp=x/y;
+				break;
+		};
+		document.getElementById("output").innerHTML="Result: " + otp;
+	});
+</script>
+</body>
+</html>

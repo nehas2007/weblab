@@ -4,26 +4,41 @@
 	<title>LOGIN2</title>
 </head>
 <body>
-	<h3><u>welcome</u></h3>
-	Username:<input type="text" id="username" placeholder="name"><br><br>
-	Password:<input type="text" id="pass" placeholder="Enter password"><br><br>
-	<input type="submit" value="Submit" id="btn" onclick="checkvalue()">
 	<script>
-	
 		function checkvalue()
 		{
-			let username=document.getElementById("username").value;
-			let usernamePattern=/\w+@\w+\.+
-			if(username.trim() ==="")
+			let username=document.getElementById("email").value;
+			let usernamePattern=/\w+@\w+\.w+/;
+			if(pattern.test(user))
 			{
-				alert("username is required!");
+				console.log("Correct");
+			}
+			else
+			{
+				console.log("Incorrect");
 			}
 		}
-		let password=document.getElementById("pass").value;
-		if(password.length<6 || password.length>12)
-		{
-				alert("password is incorrect!");
-		}
+	</script>
+<head>
+<body>
+		<h2 align="center">Welcome!</h2>
+		Username:<input type="email" id="email" placeholder="name@gmail.com"><br><br>
+		Password:<input type="text" id="password" placeholder="password"><br><br>
+		<input type="submit" value="submit" id="btn" onclick=checkvalue()>
+		<script>
+			document.getElementById("btn").addEventListener("click",function()
+			{
+					
+				let password=document.getElementById("password").value;
+				if(password.length<6 || password.length>12)
+				{
+					alert("password is incorrect!");
+				}
+				else
+				{
+					alert("Password is correct");
+				}
+});	
 	</script>
 </body>
 </html>
